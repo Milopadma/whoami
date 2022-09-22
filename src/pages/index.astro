@@ -1,4 +1,5 @@
 ---
+import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -14,8 +15,27 @@ import Layout from "../layouts/Layout.astro";
     </div>
     <!-- showcase section -->
     <div class="mt-16">
-      <h2 class="text-4xl">Here's some of my work; </h2>
-      <div class="mt-8"></div>
+      <h2 class="text-4xl">Here's some of my work;</h2>
+      <div class="mt-8">
+        <Card
+          image="https://i.imgur.com/4Z03213m.png"
+          title="Mylo's Website"
+          body="This website you're on right now!"
+          href="https://portfolio.milopadma.com"
+        />
+        <Card
+		  image="https://i.imgur.com/4Z03213m.png"
+          title="whatshouldieat"
+          body="A simple web app to help you decide what to eat."
+          href="https://whatshouldieat.milopadma.com/"
+        />
+        <Card
+		  image="https://i.imgur.com/4Z03213m.png"
+          title="silent night game"
+          body="a unity game i made to teach people about a part of my culture."
+          href="https://github.com/Milopadma/SilentNightGame/tree/main"
+        />
+      </div>
     </div>
   </main>
 </Layout>
