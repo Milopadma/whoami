@@ -12,14 +12,18 @@ const { image, href, title, body } = Astro.props;
 <div class="link-card">
   <a href={href}>
     <img
+      class="max-h-56"
       src={image}
-      alt={title + " image here, but image failed to fetch :("}
+      alt={title}
+      loading="lazy"
+      width="100%"
+      height="auto"
     />
-    <h2>
+    <h2 class="font-bold">
       {title}
       <span>&rarr;</span>
     </h2>
-    <p>
+    <p class="italic">
       {body}
     </p>
   </a>
@@ -28,18 +32,19 @@ const { image, href, title, body } = Astro.props;
   :root {
     --link-gradient: linear-gradient(
       45deg,
-      #4f39fa,
-      #da62c4 30%,
+      #ffffff,
+      #4f4cdf 30%,
       var(--color-border) 60%
     );
   }
 
   .link-card {
+    flex: 0 1 30%;
     list-style: none;
     display: flex;
     flex-direction: column;
     max-width: 28rem;
-    padding: 0.15rem;
+    padding: 0.1rem;
     background-image: var(--link-gradient);
     background-size: 400%;
     border-radius: 0.5rem;
@@ -48,6 +53,7 @@ const { image, href, title, body } = Astro.props;
   }
 
   .link-card > a {
+    min-height: 450px;
     width: 100%;
     text-decoration: none;
     line-height: 1.4;
@@ -78,7 +84,7 @@ const { image, href, title, body } = Astro.props;
   }
 
   .link-card:is(:hover, :focus-within) h2 {
-    color: #4f39fa;
+    color: #3480d7;
   }
 
   .link-card:is(:hover, :focus-within) h2 span {

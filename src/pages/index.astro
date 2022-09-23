@@ -12,8 +12,12 @@ import Layout from "../layouts/Layout.astro";
         <span class="mt-8 text-8xl">Hello</span>
       </div>
       <p class="mt-8 text-4xl">I'm Mylo</p>
-      <p class="mt-8 lg:text-4xl text-2xl">a web developer</p>
-      <p class="lg:text-4xl text-2xl">from Bali, Indonesia.</p>
+      <p class="mt-8 lg:text-4xl text-2xl">
+        a <span class="font-bold">web developer</span>
+      </p>
+      <p class="lg:text-4xl text-2xl">
+        from <span class="font-bold">Bali, Indonesia.</span>
+      </p>
       <p class="lg:text-4xl text-2xl">currently in university,</p>
       <p class="lg:text-4xl text-2xl">
         studying <span class="font-bold">Computer Science</span>.
@@ -42,17 +46,17 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      <div class="mt-8 lg:flex flex-row">
+      <div class="mt-8 lg:flex flex-row flex-wrap justify-center">
         <Card
           image="/portfolio.png"
           title="mylo's portfolio"
-          body="This website you're on right now!"
+          body="this website you're on right now!"
           href="https://portfolio.milopadma.com"
         />
         <Card
           image="/whatshouldieat.png"
           title="whatshouldieat"
-          body="A simple web app to help you decide what to eat."
+          body="a simple web app to help you decide what to eat."
           href="https://whatshouldieat.milopadma.com/"
         />
         <Card
@@ -61,6 +65,44 @@ import Layout from "../layouts/Layout.astro";
           body="a unity game i made to teach people about a part of my culture."
           href="https://github.com/Milopadma/SilentNightGame/tree/main"
         />
+        <Card
+          image="/.png"
+          title="???"
+          body="???"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        />
+        <Card
+          image="/.png"
+          title="???"
+          body="???"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        />
+        <Card
+          image="/.png"
+          title="???"
+          body="???"
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        />
+      </div>
+      <div class="flex flex-row justify-center mt-16 italic">More to come!</div>
+    </div>
+    <!-- contact section -->
+    <div class="mt-16">
+      <h2 class="text-4xl">Contact me</h2>
+      <div class="mt-8 flex justify-evenly">
+        <a
+          href="mailto:milopadma@yahoo.com"
+          class="text-2xl text-blue-600 hover:text-blue-800">Email</a
+        >
+        <a
+          href="https://github.com/milopadma
+          "
+          class="text-2xl text-blue-600 hover:text-blue-800">Github</a
+        >
+        <a href="https://www.linkedin.com/in/milopadma-mylo787
+          " class="text-2xl text-blue-600 hover:text-blue-800"
+          >LinkedIn</a
+        >
       </div>
     </div>
   </main>
