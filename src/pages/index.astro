@@ -4,22 +4,48 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="mylodev">
-  <main class="flex-row justify-center items-center margin p-12">
+  <main class="ml-4 mr-4 sm:ml-32 sm:mr-32 p-12 flex flex-col justify-center">
     <!-- intro section -->
-    <div class="text-4xl">
-      <h1 class="mt-12 text-8xl relative right-12 bold">*Hello</h1>
-      <h2 class="mt-8 text-4xl">I'm Mylo</h2>
-      <p class="mt-8">a 20-year-old web developer</p>
-      <p>from Bali, Indonesia.</p>
-      <p>Currently in University studying Computer Science.</p>
+    <div class="mt-60">
+      <div class="relative right-12">
+        <span class="text-blue-600 text-8xl">*</span>
+        <span class="mt-8 text-8xl">Hello</span>
+      </div>
+      <p class="mt-8 text-4xl">I'm Mylo</p>
+      <p class="mt-8 lg:text-4xl text-2xl">a web developer</p>
+      <p class="lg:text-4xl text-2xl">from Bali, Indonesia.</p>
+      <p class="lg:text-4xl text-2xl">currently in university,</p>
+      <p class="lg:text-4xl text-2xl">
+        studying <span class="font-bold">Computer Science</span>.
+      </p>
     </div>
     <!-- showcase section -->
     <div class="mt-16">
       <h2 class="text-4xl">Here's some of my work;</h2>
-      <div class="mt-8">
+      <!-- down arrow symbol thats always on the bottom of screen without position absolute-->
+      <div class="flex flex-row justify-center items-center">
+        <div class="mt-8">
+          <svg
+            id="arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 animate-bounce relative bottom-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="blue"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="mt-8 lg:flex flex-row">
         <Card
           image="/portfolio.png"
-          title="Mylo's Website"
+          title="mylo's portfolio"
           body="This website you're on right now!"
           href="https://portfolio.milopadma.com"
         />

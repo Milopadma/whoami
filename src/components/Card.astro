@@ -11,7 +11,10 @@ const { image, href, title, body } = Astro.props;
 
 <div class="link-card">
   <a href={href}>
-	<img src={image} alt={title + " image here, but image failed to fetch :("} />	
+    <img
+      src={image}
+      alt={title + " image here, but image failed to fetch :("}
+    />
     <h2>
       {title}
       <span>&rarr;</span>
@@ -35,7 +38,7 @@ const { image, href, title, body } = Astro.props;
     list-style: none;
     display: flex;
     flex-direction: column;
-    max-width: 24rem;
+    max-width: 28rem;
     padding: 0.15rem;
     background-image: var(--link-gradient);
     background-size: 400%;
