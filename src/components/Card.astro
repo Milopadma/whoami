@@ -10,9 +10,9 @@ const { image, href, title, body } = Astro.props;
 ---
 
 <div class="link-card">
-  <a href={href}>
+  <a href={href} class="lg:min-h-[450px] min-h-0">
     <img
-      class="max-h-56"
+      class="max-h-[250px] min-h-[250px] w-full object-cover"
       src={image}
       alt={title}
       loading="lazy"
@@ -53,7 +53,6 @@ const { image, href, title, body } = Astro.props;
   }
 
   .link-card > a {
-    min-height: 450px;
     width: 100%;
     text-decoration: none;
     line-height: 1.4;
