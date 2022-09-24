@@ -3,6 +3,14 @@ import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
+<script>
+  //check the window height and place the element with id of "arrow" at the bottom of the page
+  const arrow = document.getElementById("arrow");
+  const windowHeight = window.innerHeight;
+  if (arrow) {
+    arrow.style.top = windowHeight - 980 + "px";
+  }
+</script>
 <Layout title="mylodev">
   <main class="ml-4 mr-4 sm:ml-32 sm:mr-32 p-12 flex flex-col justify-center">
     <!-- intro section -->
