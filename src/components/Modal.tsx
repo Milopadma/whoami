@@ -66,7 +66,11 @@ export const Modal = (props: ModalProps) => {
           <p className="py-2">{props.description2}</p>
           <p className="py-2">{props.description3}</p>
 
-          <div className="flex justify-end items-center">{props.link}</div>
+          <div className="modal-action">
+            <a href={props.link} className="btn btn-outline text-blue-600" target="_blank">
+              View project
+            </a>
+          </div>
         </label>
       </label>
     </div>
