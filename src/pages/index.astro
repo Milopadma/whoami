@@ -1,7 +1,8 @@
 ---
-import Card from "../components/Card.astro";
 import Layout from "../layouts/Layout.astro";
-import Modal from "../components/Modal.jsx";
+// import { PortfolioSection } from "../components/PortfolioSection";
+import { Card } from "../components/Card";
+import { Modal } from "../components/Modal";
 ---
 
 <script>
@@ -56,9 +57,14 @@ import Modal from "../components/Modal.jsx";
       </div>
 
       <div class="mt-8 lg:flex flex-row flex-wrap justify-center">
+        <!-- <PortfolioSection client:only="react" /> -->
         <Modal
+          image="./portfolio.png"
+          modalID={1}
           title="mylo's portfolio"
-          description="A quick brief story about this site, i saw a Fireship video about Astro and it really piqued my interests, as a i didnt have anything else to do on a wednesday afternoon, i decided to just rebuild my portfolio website in Astro. I really like the simplicity of Astro and how it's just a simple static site generator, and i also like the fact that it's written in pure js, so i can just use it as a normal js library. I also like the fact that it's just a simple static site generator, and i also like the fact that it's written in pure js, so i can just use it as a normal js library. I also like the fact that it's just a simple static site generator, and i also like the fact that it's written in pure js, so i can just use it as a normal js library."
+          description="A quick brief story about this site, i saw a Fireship video about Astro and it really piqued my interests, as a i didnt have anything else to do on a wednesday afternoon, I decided to just rebuild my portfolio website in Astro."
+          description2="I like the simplicity of Astro and how it's just a simple static site generator, but has the benefit of being able to use React components, which is really nice."
+          description3="I really see myself using Astro in the future to quickly spin up static websites."
           link="https://github.com/Milopadma/whoami"
         >
           <Card
@@ -67,43 +73,72 @@ import Modal from "../components/Modal.jsx";
             body="this website you're on right now!"
           />
         </Modal>
+        <!-- <Modal client:only="react">
+          <div slot="card">test 1</div>
+          <div slot="image">
+            <img src="./portfolio.png" />
+          </div>
+          <h3 slot="title">mylo's portfolio</h3>
+          <p slot="description">
+            A quick brief story about this site, i saw a Fireship video about
+            Astro and it really piqued my interests, as a i didnt have anything
+            else to do on a wednesday afternoon, I decided to just rebuild my
+            portfolio website in Astro.
+          </p>
+          <p slot="description2">
+            I like the simplicity of Astro and how it's just a simple static
+            site generator, but has the benefit of being able to use React
+            components, which is really nice.
+          </p>
+          <p slot="description3">
+            I really see myself using Astro in the future to quickly spin up
+            static websites.
+          </p>
+          <a
+            slot="link"
+            href="https://github.com/milopadma/whoami"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-500 btn btn-outline"
+          >
+            View Project
+          </a>
+        </Modal>
 
-        <Card
-          image="/portfolio.png"
-          title="mylo's portfolio"
-          body="this website you're on right now!"
-          href="https://portfolio.milopadma.com"
-        />
-        <Card
-          image="/whatshouldieat.png"
-          title="whatshouldieat"
-          body="a simple web app to help you decide what to eat."
-          href="https://whatshouldieat.milopadma.com/"
-        />
-        <Card
+        <Modal client:only="react">
+          <div slot="card">test-2</div>
+          <div slot="image">
+            <img src="./whatshouldieat.png" />
+          </div>
+          <h3 slot="title">whatshouldieat</h3>
+          <p slot="description">
+            "A simple web app that helps you decide what to eat. As my maid
+            keeps asking me every single day what I want to eat the next day, I
+            decided to make this app to help myself think of food ideas."
+          </p>
+          <p slot="description2">
+            "I made this app using NextJS, Tailwind and Prisma, hosted with
+            vercel and Railway as a quick postgresql database."
+          </p>
+          <p slot="description3">something</p>
+          <a
+            slot="link"
+            href="https://github.com/milopadma/whatshouldieat"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-500 btn btn-outline"
+          >
+            View Project
+          </a>
+        </Modal> -->
+
+        <!-- <Card
           image="/silentnightgame.png"
           title="silent night game"
           body="a unity game i made to teach people about a part of my culture."
           href="https://github.com/Milopadma/SilentNightGame/tree/main"
         />
-        <Card
-          image="/.png"
-          title="???"
-          body="???"
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        />
-        <Card
-          image="/.png"
-          title="???"
-          body="???"
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        />
-        <Card
-          image="/.png"
-          title="???"
-          body="???"
-          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        />
+          -->
       </div>
       <div class="flex flex-row justify-center mt-16 italic">More to come!</div>
     </div>

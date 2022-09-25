@@ -3,19 +3,21 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/react': ^1.1.4
   '@astrojs/tailwind': ^2.0.1
+  '@types/react': ^18.0.21
   astro: ^1.2.8
   autoprefixer: 10.0.2
   daisyui: ^2.31.0
   postcss: 8.3.3
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
-  react: ^18.0.0
-  react-dom: ^18.0.0
-  tailwindcss: ^3.0.24
+  react: ^18.2.0
+  react-dom: ^18.2.0
+  tailwindcss: ^3.1.8
 
 dependencies:
   '@astrojs/react': 1.1.4_biqbaboplfbrettd7655fr4n2y
   '@astrojs/tailwind': 2.0.1_tailwindcss@3.1.8
+  '@types/react': 18.0.21
   astro: 1.2.8
   autoprefixer: 10.0.2_postcss@8.3.3
   daisyui: 2.31.0_gn4q6ft53psqgzcc347aebysyi
@@ -626,8 +628,24 @@ packages:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
 
+  /@types/prop-types/15.7.5:
+    resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
+    dev: false
+
+  /@types/react/18.0.21:
+    resolution: {integrity: sha512-7QUCOxvFgnD5Jk8ZKlUAhVcRj7GuJRjnjjiY/IUBWKgOlnvDvTMLD4RTF7NPyVmbRhNrbomZiOepg7M/2Kj1mA==}
+    dependencies:
+      '@types/prop-types': 15.7.5
+      '@types/scheduler': 0.16.2
+      csstype: 3.1.1
+    dev: false
+
   /@types/resolve/1.20.2:
     resolution: {integrity: sha512-60BCwRFOZCQhDncwQdxxeOEEkbc5dIMccYLwbxsS4TUNeVECQ/pBJ0j09mrHOl/JJvpRPGwO9SvE4nR2Nb/a4Q==}
+    dev: false
+
+  /@types/scheduler/0.16.2:
+    resolution: {integrity: sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew==}
     dev: false
 
   /@types/unist/2.0.6:
@@ -1080,6 +1098,10 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
+    dev: false
+
+  /csstype/3.1.1:
+    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
     dev: false
 
   /daisyui/2.31.0_gn4q6ft53psqgzcc347aebysyi:
