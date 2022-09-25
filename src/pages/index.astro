@@ -57,11 +57,12 @@ import { Modal } from "../components/Modal";
       </div>
 
       <div class="mt-8 lg:flex flex-row flex-wrap justify-center">
-        <!-- <PortfolioSection client:only="react" /> -->
+        <!--  -->
         <Modal
           image="./portfolio.png"
           modalID={1}
           title="mylo's portfolio"
+          tech="Astrojs, ReactJS, Tailwindcss"
           description="A quick brief story about this site, i saw a Fireship video about Astro and it really piqued my interests, as a i didnt have anything else to do on a wednesday afternoon, I decided to just rebuild my portfolio website in Astro."
           description2="I like the simplicity of Astro and how it's just a simple static site generator, but has the benefit of being able to use React components, which is really nice."
           description3="I really see myself using Astro in the future to quickly spin up static websites."
@@ -73,64 +74,40 @@ import { Modal } from "../components/Modal";
             body="this website you're on right now!"
           />
         </Modal>
-        <!-- <Modal client:only="react">
-          <div slot="card">test 1</div>
-          <div slot="image">
-            <img src="./portfolio.png" />
-          </div>
-          <h3 slot="title">mylo's portfolio</h3>
-          <p slot="description">
-            A quick brief story about this site, i saw a Fireship video about
-            Astro and it really piqued my interests, as a i didnt have anything
-            else to do on a wednesday afternoon, I decided to just rebuild my
-            portfolio website in Astro.
-          </p>
-          <p slot="description2">
-            I like the simplicity of Astro and how it's just a simple static
-            site generator, but has the benefit of being able to use React
-            components, which is really nice.
-          </p>
-          <p slot="description3">
-            I really see myself using Astro in the future to quickly spin up
-            static websites.
-          </p>
-          <a
-            slot="link"
-            href="https://github.com/milopadma/whoami"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-blue-500 btn btn-outline"
-          >
-            View Project
-          </a>
+        <!--  -->
+        <Modal
+          image="./whatshouldieat.png"
+          modalID={2}
+          title="whatshouldieat"
+          tech="React, NextJS, Tailwind, Prisma, PostgreSQL"
+          description="As my maid keeps asking me every single day what I want to eat the next day, Idecided to make this app to help myself think of food ideas."
+          description2="I made this app using NextJS, Tailwind and Prisma, hosted withvercel and Railway as a quick postgresql database."
+          description3="I really see myself using Astro in the future to quickly spin up static websites."
+          link="https://github.com/Milopadma/whatshouldieat"
+        >
+          <Card
+            image="/whatshouldieat.png"
+            title="whatshouldieat"
+            body="a simple web app to help you decide what to eat."
+          />
         </Modal>
-
-        <Modal client:only="react">
-          <div slot="card">test-2</div>
-          <div slot="image">
-            <img src="./whatshouldieat.png" />
-          </div>
-          <h3 slot="title">whatshouldieat</h3>
-          <p slot="description">
-            "A simple web app that helps you decide what to eat. As my maid
-            keeps asking me every single day what I want to eat the next day, I
-            decided to make this app to help myself think of food ideas."
-          </p>
-          <p slot="description2">
-            "I made this app using NextJS, Tailwind and Prisma, hosted with
-            vercel and Railway as a quick postgresql database."
-          </p>
-          <p slot="description3">something</p>
-          <a
-            slot="link"
-            href="https://github.com/milopadma/whatshouldieat"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-blue-500 btn btn-outline"
-          >
-            View Project
-          </a>
-        </Modal> -->
+        <!--  -->
+        <Modal
+          image="./silentnightgame.png"
+          modalID={3}
+          title="silentnightgame"
+          tech="Unity, C#"
+          description="really proud about this one. before this, i hade zero experience on game development and i decided to take a summer course on game development from my campus."
+          description2="the course told us to use unity, and i learned a lot about C# scripting, managing a team project and game development in general."
+          description3="the game itself is about a character that has to get home and avoid the guards along the way, as the prompt of the course final project was to make a game that has a story about our own culture."
+          link="https://github.com/Milopadma/silentnightgame"
+        >
+          <Card
+            image="/silentnightgame.png"
+            title="silentnightgame"
+            body="a unity game i made to teach people about a part of my culture."
+          />
+        </Modal>
 
         <!-- <Card
           image="/silentnightgame.png"
