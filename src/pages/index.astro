@@ -6,11 +6,20 @@ import { Modal } from "../components/Modal";
 ---
 
 <script>
-  //check the window height and place the element with id of "arrow" at the bottom of the page
+  // //check the window height and place the element with id of "arrow" at the bottom of the page
+  // const arrow = document.getElementById("arrow");
+  // const windowHeight = window.innerHeight;
+  // if (arrow) {
+  //   arrow.style.top = windowHeight - 980 + "px";
+  // }
+
+  //find the aspect ratio of the window and set the height of the "arrow" element to match
   const arrow = document.getElementById("arrow");
+  const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
+  const aspectRatio = windowWidth / windowHeight;
   if (arrow) {
-    arrow.style.top = windowHeight - 980 + "px";
+    arrow.style.top = aspectRatio * -2 + "vh";
   }
 </script>
 <Layout title="mylodev">
