@@ -42,7 +42,7 @@ interface ModalProps {
 
 export const Modal = (props: ModalProps) => {
   return (
-    <div>
+    <div className="flex justify-center content-center p-2">
       <label htmlFor={`my-modal-${props.modalID}`} className="modal-button">
         {props.children}
       </label>

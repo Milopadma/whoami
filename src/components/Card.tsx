@@ -30,7 +30,7 @@ export interface Props {
 export const Card = ({ image, title, body }: Props) => {
   return (
     <div>
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card card-compact lg:w-96 w-72 bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt={title} />
         </figure>
