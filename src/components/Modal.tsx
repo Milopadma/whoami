@@ -70,6 +70,7 @@ export const Modal = (props: ModalProps) => {
             <a href={props.link} className="btn btn-outline text-blue-600" target="_blank">
               View project
             </a>
+            <label htmlFor={`my-modal-${props.modalID}`} className="btn btn-ghost">Close</label>
           </div>
         </label>
       </label>
