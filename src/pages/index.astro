@@ -115,22 +115,42 @@ import { Modal } from "../components/Modal";
     <!-- courses i've taken section -->
     <div class="mt-16">
       <h2 class="text-4xl">Courses I've taken;</h2>
+      <div class="italic text-xl text-gray-500">
+        sometimes, it's worth going the extra mile.
+      </div>
       <div class="mt-8 lg:flex flex-row flex-wrap justify-center">
         <!--  -->
         <Modal
           image="https://img-c.udemycdn.com/course/480x270/705264_caa9_13.jpg"
-          modalID={4}
+          modalID={11}
           title="Modern React with Redux"
           tech="React, Redux"
-          description="I've taken a lot of courses on udemy, but the ones that really stuck with me are the ones that taught me how to build a full stack web app."
+          description="placeholder"
           description2="I really like how udemy has a lot of courses that are really cheap, and the quality of the courses are really good."
-          description3="#notsponsored"
+          description3="Completed this course in September 2022."
           link="https://www.github.com/milopadma/reactcourse"
         >
           <Card
-            image="https://img-c.udemycdn.com/course/480x270/705264_caa9_13.jpg "
+            image="https://img-c.udemycdn.com/course/480x270/705264_caa9_13.jpg"
             title="Modern React with Redux"
             body="a udemy course that teaches the fundamentals and delves into the deep end of the ReactJS library."
+          />
+        </Modal>
+        <!--  -->
+        <Modal
+          image="https://img-c.udemycdn.com/course/480x270/19332_6b49_15.jpg"
+          modalID={12}
+          title="The Complete 2020 Fullstack Web Developer Course"
+          tech="HTML, CSS, JS"
+          description="a course by one Kalob Taulien, fantastic teacher that is able to convey his knowledge in a way that is easy to understand."
+          description2="this course taught me the very very basic of web development and how HTML, CSS and JS work together."
+          description3="the course also goes the extra mile and teaches you how to use Python and Git, with extra knowledge of how REST APIs work. Completed this course in August 2021."
+          link="https://www.udemy.com/course/thecompletewebdeveloper/"
+        >
+          <Card
+            image="https://img-c.udemycdn.com/course/480x270/19332_6b49_15.jpg"
+            title="The Complete 2020 Fullstack Web Developer Course"
+            body="a course about the fundamentals of web development, and how to build a fullstack web app."
           />
         </Modal>
         <!--  -->
@@ -142,6 +162,7 @@ import { Modal } from "../components/Modal";
     <!-- contact section -->
     <div class="mt-16">
       <h2 class="text-4xl">Contact me;</h2>
+      <div class="italic text-xl text-gray-500">don't be shy!</div>
       <div class="mt-8 lg:pl-10 pl-8 flex lg:justify-evenly justify-between">
         <a
           href="mailto:milopadma@yahoo.com"
