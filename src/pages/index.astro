@@ -1,19 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-// import { PortfolioSection } from "../components/PortfolioSection";
 import { Card } from "../components/Card";
 import { Modal } from "../components/Modal";
 ---
 
 <script>
-  // //check the window height and place the element with id of "arrow" at the bottom of the page
-  // const arrow = document.getElementById("arrow");
-  // const windowHeight = window.innerHeight;
-  // if (arrow) {
-  //   arrow.style.top = windowHeight - 980 + "px";
-  // }
-
-  //find the aspect ratio of the window and set the height of the "arrow" element to match
+  //this is to find the aspect ratio of the window and set the height of the "arrow" element to match
   const arrow = document.getElementById("arrow");
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
@@ -120,9 +112,36 @@ import { Modal } from "../components/Modal";
       </div>
       <div class="flex flex-row justify-center mt-16 italic">More to come!</div>
     </div>
+    <!-- courses i've taken section -->
+    <div class="mt-16">
+      <h2 class="text-4xl">Courses I've taken;</h2>
+      <div class="mt-8 lg:flex flex-row flex-wrap justify-center">
+        <!--  -->
+        <Modal
+          image="https://img-c.udemycdn.com/course/480x270/705264_caa9_13.jpg"
+          modalID={4}
+          title="Modern React with Redux"
+          tech="React, Redux"
+          description="I've taken a lot of courses on udemy, but the ones that really stuck with me are the ones that taught me how to build a full stack web app."
+          description2="I really like how udemy has a lot of courses that are really cheap, and the quality of the courses are really good."
+          description3="#notsponsored"
+          link="https://www.github.com/milopadma/reactcourse"
+        >
+          <Card
+            image="https://img-c.udemycdn.com/course/480x270/705264_caa9_13.jpg "
+            title="Modern React with Redux"
+            body="a udemy course that teaches the fundamentals and delves into the deep end of the ReactJS library."
+          />
+        </Modal>
+        <!--  -->
+      </div>
+      <div class="flex flex-row justify-center mt-16 italic">
+        Still learning more!
+      </div>
+    </div>
     <!-- contact section -->
     <div class="mt-16">
-      <h2 class="text-4xl">Contact me</h2>
+      <h2 class="text-4xl">Contact me;</h2>
       <div class="mt-8 lg:pl-10 pl-8 flex lg:justify-evenly justify-between">
         <a
           href="mailto:milopadma@yahoo.com"
