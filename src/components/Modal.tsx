@@ -28,7 +28,10 @@ export const Modal = (props: ModalProps) => {
       >
         <label className="modal-box relative" htmlFor="">
           {/* banner iamge spanning the top 25% of the modal */}
+          <div className="flex items-center justify-center">
           <img src={props.image} alt={props.title} />
+
+          </div>
 
           <h3 className="text-2xl font-bold">{props.title}</h3>
           <h4 className="text-l italic">Tech used: {props.tech}</h4>
