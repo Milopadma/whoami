@@ -13,6 +13,8 @@
   "dependencies": {
     "@astrojs/react": "^1.1.4",
     "@astrojs/tailwind": "^2.0.1",
+    "@react-three/drei": "^9.86.0",
+    "@splinetool/r3f-spline": "^1.0.2",
     "@types/react": "^18.0.21",
     "animejs": "^3.2.1",
     "astro": "^1.2.8",
