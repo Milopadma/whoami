@@ -4,19 +4,22 @@ import { useLoader } from "@react-three/fiber";
 import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 import React from "react";
 
-const Computers = ({ isMobile = false }) => {
+const Computers = ({ isMobile = true }) => {
   const gltf = useLoader(GLTFLoader, "/untitled.gltf");
   const ref = React.useRef();
-  useFrame(() => (ref.current.rotation.y += 0.01));
+  useFrame(() => {
+    ref.current.rotation.y += 0.01;
+    ref.current.rotation.x += 0.01;
+  });
 
   return (
     <group>
       <primitive
         ref={ref}
-        scale={isMobile ? 0.75 : 2}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        scale={isMobile ? 3 : 2}
+        position={isMobile ? [3, 1, -2] : [0, -3.25, -1.5]}
         lightMapIntensity={0.5}
-        rotation={[-0.01, -2.5, -0]}
+        rotation={[-0.01, -2.5, 4]}
         object={gltf.scene}
       />
     </group>
