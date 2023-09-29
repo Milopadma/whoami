@@ -3,6 +3,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { useLoader } from "@react-three/fiber";
 import { OrbitControls, OrthographicCamera } from "@react-three/drei";
 import React from "react";
+import * as THREE from "three";
 
 const Computers = ({ isMobile = true }) => {
   const gltf = useLoader(GLTFLoader, "/untitled.gltf");
@@ -10,13 +11,21 @@ const Computers = ({ isMobile = true }) => {
   useFrame(() => {
     ref.current.rotation.y += 0.01;
     ref.current.rotation.x += 0.01;
+    // scale up until 3
+    if (ref.current.scale.x < 3) {
+      ref.current.scale.x += 0.01;
+      ref.current.scale.y += 0.01;
+      ref.current.scale.z += 0.01;
+    }
   });
+
 
   return (
     <group>
       <primitive
         ref={ref}
-        scale={isMobile ? 3 : 2}
+        castShadow
+        scale={isMobile ? 0 : 2}
         position={isMobile ? [3, 1, -2] : [0, -3.25, -1.5]}
         lightMapIntensity={0.5}
         rotation={[-0.01, -2.5, 4]}
