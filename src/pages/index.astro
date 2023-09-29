@@ -21,27 +21,42 @@ import Spline from "@splinetool/react-spline";
   <main class="ml-4 mr-4 sm:ml-32 sm:mr-32 p-12 flex flex-col justify-center">
     <!-- intro section -->
     <br class="h-20" />
-    <div class="flex flex-row">
-      <div class="flex flex-col">
-        <p class="text-8xl bold tracking-tighter text-left font-black">Hello</p>
+    <div class="grid grid-cols-12">
+      <div class="flex flex-col sm:col-span-8 col-span-12 relative z-10">
+        <p class="text-8xl bold tracking-tighter text-left font-black" id="intro-text">Hello</p>
         <br />
-        <p class="text-4xl tracking-tight">i'm mylo</p>
-        <p class="lg:text-4xl text-2xl">
+        <p class="text-4xl tracking-tight" id="intro-text">i'm mylo</p>
+        <p class="lg:text-4xl text-2xl" id="intro-text">
           a <span class="font-bold">web developer</span>
         </p>
-        <p class="lg:text-4xl text-2xl">
+        <p class="lg:text-4xl text-2xl" id="intro-text">
           from <span class="font-bold">Bali, Indonesia.</span>
         </p>
-        <p class="lg:text-4xl text-2xl">currently in university,</p>
-        <p class="lg:text-4xl text-2xl">
+        <p class="lg:text-4xl text-2xl" id="intro-text">currently in university,</p>
+        <p class="lg:text-4xl text-2xl" id="intro-text">
           studying <span class="font-bold">Computer Science</span>.
         </p>
       </div>
-      <div>
-        <ComputersCanvas />
-        yup
+      <div class="h-96 w-full flex flex-row sm:col-span-4 col-span-12 absolute sm:relative top-0 left-0">
+        <ComputersCanvas client:only />
       </div>
     </div>
+    <script>
+      // wait for the ComputersCanvas element to load
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      const textElements = document.querySelectorAll('#intro-text');
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      textElements.forEach(text => {
+        const rect = text.getBoundingClientRect();
+        const imageData = ctx.getImageData(rect.left, rect.top, rect.width, rect.height);
+        for (let i = 0; i < imageData.data.length; i += 4) {
+          if (imageData.data[i] < 128) {
+            text.style.color = 'white';
+          }
+        }
+      });
+    </script>
     <!-- showcase section -->
     <div class="mt-16 animate-fadeUp">
       <h2 class="text-4xl">Here's some of my work;</h2>
