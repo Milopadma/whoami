@@ -1,5 +1,8 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
+import { Container } from "../components/container";
+import { Card } from "../components/card";
 
 function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -15,7 +18,8 @@ function Portfolio() {
           <div>projects</div>
           <div onClick={toggleMenu}>
             {/* Render the hamburger icon */}
-            <img
+            <Image
+              alt="menu"
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c9ee0f7d2ed184709ca3ade9cc59782f8d25ff939d7d037f7787cc16328dfd9?"
               className="aspect-square w-7 shrink-0"
