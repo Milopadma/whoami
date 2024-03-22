@@ -15,6 +15,8 @@ export const Card = ({
         loading="lazy"
         src={image}
         className="aspect-[1.72] w-full max-w-[500px] rounded-t-2xl"
+        width={500}
+        height={256}
       />
       <div className="mt-8 flex flex-col px-4 md:px-16">
         <div className="font-bold">{title}</div>

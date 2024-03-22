@@ -21,8 +21,10 @@ function Portfolio() {
             <Image
               alt="menu"
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c9ee0f7d2ed184709ca3ade9cc59782f8d25ff939d7d037f7787cc16328dfd9?"
+              src="/burger.svg"
               className="aspect-square w-7 shrink-0"
+              width={64}
+              height={64}
             />
           </div>
         </div>
@@ -52,7 +54,7 @@ function Portfolio() {
         <div className="fixed inset-0 z-50 grid grid-cols-6 bg-black">
           <div className="menu col-span-4 col-start-2 flex items-center">
             {/* Add your menu items here */}
-            <ul className="text-6xl font-extrabold tracking-tighter text-white md:text-9xl">
+            <ul className="max-w-[500px] text-6xl font-extrabold tracking-tighter text-white md:text-9xl">
               <a href="/about" className="underline-animation">
                 about
               </a>
