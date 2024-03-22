@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+html {
+    font-family: "Helvetica", "Roboto", sans-serif;
+}
+
+.test {
+    @apply bg-red-500;
+}
+
+div {
+    letter-spacing: -0.05em;
+}
+
+.animate-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 0.3s;
+}
+
+.animate-underline:hover {
+    background-size: 100% 2px;
+}
+
+@layer components {
+    .debug {
+        @apply border border-red-500;
+    }
+
+    .horizontal {
+        @apply flex flex-row;
+    }
+
+    .vertical {
+        @apply flex flex-col;
+    }
+
+    .horizontal.center-v {
+        @apply items-center;
+    }
+
+    .horizontal.center-h {
+        @apply justify-center;
+    }
+
+    .horizontal.center {
+        @apply items-center justify-center;
+    }
+
+    .vertical.center-v {
+        @apply justify-center;
+    }
+
+    .vertical.center-h {
+        @apply items-center;
+    }
+
+    .vertical.center {
+        @apply items-center justify-center;
+    }
+
+    .space-between {
+        @apply justify-between;
+    }
+}
+
+#name[contentEditable]:empty::before {
+    content: "john doe";
+    color: #a0aec0;
+}
+
+#message[contentEditable]:empty::before {
+    content: "im interested in working together";
+    color: #a0aec0;
+}
+
+#contact[contentEditable]:empty::before {
+    content: "@john_doe on instagram";
+    color: #a0aec0;
+}
+
+@layer utilities {
+    .underline-animation {
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .underline-animation::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -2px;
+        width: 0;
+        height: 2px;
+        background-color: white;
+        transform: translateX(-50%);
+        transition: width 0.3s ease-in-out;
+    }
+
+    .underline-animation:hover::after {
+        width: 100%;
+    }
+}
