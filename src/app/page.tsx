@@ -96,7 +96,7 @@ function Home() {
         id="contact"
       >
         <div className="col-span-4 col-start-2">
-          <div className="mt-56">I'm open to work, shoot a message!</div>
+          <div className="mt-56">I&apos;m open to work, shoot a message!</div>
           <div className="mt-16 text-zinc-50">
             my name is
             <span
