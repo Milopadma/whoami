@@ -1,112 +1,135 @@
 "use client";
 import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import { useGSAP } from "@gsap/react";
+import Image from "next/image";
 import { UserForm } from "./components/form";
-
-gsap.registerPlugin(ScrollTrigger);
+import Spacing from "@/components/spacing";
 
 function Home() {
-  const portfolioRef = useRef(null);
-  const aboutRef = useRef(null);
-  const contactRef = useRef(null);
+  interface ProjectCardProps {
+    imageSrc: string;
+    title: string;
+    tags: string[];
+    description: string;
+  }
 
-  useGSAP(() => {
-    gsap.to(portfolioRef.current, {
-      color: "black",
-      textShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
-      duration: 0.001,
-      scrollTrigger: {
-        trigger: portfolioRef.current,
-        start: "top center",
-        end: "top 312px",
-        toggleActions: "play reverse play reverse",
-      },
-    });
-    gsap.to(aboutRef.current, {
-      color: "black",
-      textShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
-      duration: 0.001,
-      scrollTrigger: {
-        trigger: aboutRef.current,
-        start: "top center",
-        end: "top 312px",
-        toggleActions: "play reverse play reverse",
-      },
-    });
-    gsap.to(contactRef.current, {
-      color: "black",
-      textShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
-      duration: 0.001,
-      scrollTrigger: {
-        trigger: contactRef.current,
-        start: "top center",
-        end: "top 312px",
-        toggleActions: "play reverse play reverse",
-      },
-    });
-  });
+  const ProjectCard: React.FC<ProjectCardProps> = ({
+    imageSrc,
+    title,
+    tags,
+    description,
+  }) => (
+    <div className="flex flex-col rounded-2xl bg-zinc-50 pb-12 hover:cursor-pointer hover:scale-[101%] hover:outline hover:outline-neutral-700 hover:outline-offset-8">
+      <Image src={imageSrc} alt={title} width={500} height={835} />
+      <h3 className="mt-3 text-2xl font-bold tracking-tighter">{title}</h3>
+      <div className="mt-2.5 flex gap-2 whitespace-nowrap text-sm tracking-tighter">
+        {tags.map((tag) => (
+          <div
+            key={tag}
+            className="justify-center rounded-3xl border border-solid border-black px-2 py-0.5"
+          >
+            {tag}
+          </div>
+        ))}
+      </div>
+      <p className="mt-3 text-base tracking-tighter">{description}</p>
+    </div>
+  );
 
-  // handle submit form
-  const handleSubmit = async () => {
-    console.log("submit");
-    const name = document.getElementById("name")!.innerText;
-    const message = document.getElementById("message")!.innerText;
-    const contact = document.getElementById("contact")!.innerText;
-    // console.log(result);
-  };
-
+  const projects = [
+    {
+      imageSrc: "/blirumah.png",
+      title: "blirumah ",
+      tags: [
+        "website",
+        "backoffice",
+        "nextjs",
+        "tailwind",
+        "postgresql",
+        "algoliasearch",
+      ],
+      description: "the online home for a property agency",
+    },
+    {
+      imageSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/a1bb09e59f25737cd80fd177858c64940ac8d6dfeb771c2f8bce905827fdf10d?apiKey=3b2ae921196341e8b90eea3d3fee0292&",
+      title: "asa wood",
+      tags: ["website", "nextjs", "tailwind"],
+      description:
+        "a place for all information regarding the best wood company in indonesia",
+    },
+    {
+      imageSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/a1bb09e59f25737cd80fd177858c64940ac8d6dfeb771c2f8bce905827fdf10d?apiKey=3b2ae921196341e8b90eea3d3fee0292&",
+      title: "asa wood",
+      tags: ["website", "nextjs", "tailwind"],
+      description:
+        "a place for all information regarding the best wood company in indonesia",
+    },
+  ];
   return (
-    <>
+    <div className="bg-zinc-50 w-full flex flex-col">
+      <Spacing xl />
+      <Spacing xl />
       <div className="grid w-screen grid-cols-6 flex-col bg-zinc-50">
-        <div className="col-span-4 col-start-2 mt-44 flex h-screen w-full flex-col items-start text-6xl tracking-tighter">
-          <div className="text-2xl font-extralight tracking-tighter text-neutral-800">
+        <div className="col-span-4 col-start-2 flex w-full flex-col items-start tracking-tighter">
+          <div className="text-xl font-normal tracking-tighter text-neutral-800">
             hello, im mylo
           </div>
-          <div className="mt-24 max-w-[500px] text-2xl font-normal tracking-tighter text-neutral-800">
+          <Spacing md />
+          <div className="max-w-[500px] text-xl font-normal tracking-tighter text-neutral-800">
             a software engineer from bali interested in positively impacting
             lives around him
           </div>
-          <div className="mt-32 flex flex-col md:mt-64">
+          <div className="flex flex-col">
+            <Spacing xl />
+            <Spacing xl />
             <a
-              className="hoverBold text-black text-opacity-5 transition-all duration-500 hover:text-opacity-100"
-              href="/portfolio"
-              ref={portfolioRef}
-            >
-              portfolio
-            </a>
-            <a
-              className="hoverBold text-black text-opacity-5 transition-all duration-500 hover:text-opacity-100"
+              className="text-black font-bold text-6xl text-opacity-5 transition-all duration-500 hover:text-opacity-100"
               href="/about"
-              ref={aboutRef}
             >
               about
             </a>
             <a
-              className="text-black text-opacity-5 transition-all duration-500 hover:text-opacity-100"
-              ref={contactRef}
+              className="text-black font-bold text-6xl text-opacity-5 transition-all duration-500 hover:text-opacity-100"
               href="#contact"
             >
               contact
             </a>
           </div>
+          <Spacing xl />
+          <Spacing xl />
+          <h2 className="text-3xl font-bold tracking-tighter">recent work</h2>
+          <Spacing sm />
+          <div className="flex flex-wrap gap-8">
+            <ProjectCard {...projects[0]} />
+            <ProjectCard {...projects[1]} />
+            <ProjectCard {...projects[2]} />
+          </div>
         </div>
       </div>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/9037e9a2fcd716a21ed39d8acb33ae89946c7e2aa4ec24a0457209329190b0c2?apiKey=3b2ae921196341e8b90eea3d3fee0292&"
-        alt=""
-        className="stroke-opacity-30 mt-96 aspect-[0.23] w-6 border-[3px] border-solid border-black border-opacity-30 stroke-black stroke-[3px]"
-      />
-      <footer className="relative mt-48 flex w-full flex-col self-stretch text-2xl tracking-tighter text-zinc-50">
-        <div className="absolute z-10 min-h-[129px] w-full -translate-y-[50%] rounded-full bg-neutral-800" />
-        <div className="mt-0 flex w-full flex-col bg-neutral-800 p-20 max-sm:px-6">
-          <p className="mt-56">im open to work, shoot a message!</p>
+      <Spacing xl />
+      <Spacing xl />
+      <div className="w-full flex justify-center">
+        <img
+          src="https://cdn.builder.io/api/v1/image/assets/TEMP/9037e9a2fcd716a21ed39d8acb33ae89946c7e2aa4ec24a0457209329190b0c2?apiKey=3b2ae921196341e8b90eea3d3fee0292&"
+          alt=""
+          className="stroke-opacity-30 aspect-[0.23] w-6 border-solid border-black border-opacity-30 stroke-black stroke-[3px]"
+        />
+      </div>
+      <Spacing xl />
+      <footer
+        className="relative w-full flex-col self-stretch text-2xl tracking-tighter text-zinc-50 md:grid md:grid-cols-6 flex"
+        id="contact"
+      >
+        <div className="absolute z-10 min-h-[129px] w-full -translate-y-[50%] rounded-full bg-neutral-800 col-span-4 col-start-2" />
+        <div className="flex w-full flex-col bg-neutral-800 p-20 max-sm:px-6 col-span-4 col-start-2">
+          <p>im open to work, shoot a message!</p>
           <UserForm />
         </div>
+        <div className="absolute z-10 min-h-[129px] w-full translate-y-[390%] rounded-full bg-neutral-800 col-span-4 col-start-2" />
       </footer>
-    </>
+      <Spacing xl />
+    </div>
   );
 }
 

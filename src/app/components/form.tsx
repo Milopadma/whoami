@@ -60,10 +60,10 @@ export function UserForm() {
                 <Input
                   placeholder="john doe"
                   {...field}
-                  className="text-black placeholder:text-neutral-300"
+                  className="text-white placeholder:text-neutral-700 bg-neutral-800 border-b-2 border-neutral-900 focus:border-neutral"
                 />
               </FormControl>
-              <FormDescription>Your name.</FormDescription>
+              {/* <FormDescription>Your name.</FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -78,10 +78,10 @@ export function UserForm() {
                 <Input
                   placeholder="hi"
                   {...field}
-                  className="text-black placeholder:text-neutral-300"
+                  className="text-white placeholder:text-neutral-700 bg-neutral-800 border-b-2 border-neutral-900 focus:border-neutral"
                 />
               </FormControl>
-              <FormDescription>Your message.</FormDescription>
+              {/* <FormDescription>Your message.</FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
@@ -96,16 +96,22 @@ export function UserForm() {
                 <Input
                   placeholder="@john doe in instagram"
                   {...field}
-                  className="text-black placeholder:text-neutral-300"
+                  className="text-white placeholder:text-neutral-700 bg-neutral-800 border-b-2 border-neutral-900 focus:border-neutral"
                 />
               </FormControl>
-              <FormDescription>Your contact.</FormDescription>
+              {/* <FormDescription>Your contact.</FormDescription> */}
               <FormMessage />
             </FormItem>
           )}
         />
         <div className="flex w-full justify-center gap-4">
-          <Button type="submit">Submit</Button>
+          <Button
+            type="submit"
+            variant={"default"}
+            className="bg-neutral-900 min-w-[128px] px-8 hover:bg-neutral-700"
+          >
+            Submit
+          </Button>
         </div>
       </form>
     </Form>
