@@ -8,13 +8,17 @@ console.log({ token });
 
 const resend = new Resend(token);
 
-export const sendEmail = async (content: string) => {
+export const sendEmail = async (
+  content: string,
+  name: string,
+  contact: string
+) => {
   console.log("Sending email...");
   const { data, error } = await resend.emails.send({
-    from: "Portfolio User <onboarding@resend.dev>",
+    from: `${name}<no-reply@milopadma.com>`,
     to: ["public@milopadma.com"],
-    subject: "From Portfolio User",
-    html: `<div>${content}</div>`,
+    subject: `<Portfolio> ${name}`,
+    html: `<div>Content: <p>${content}</p> <br><br/> Contact: <p>${contact}</p></div>`,
   });
 
   if (error) {
