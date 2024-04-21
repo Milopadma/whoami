@@ -26,4 +26,5 @@ export const sendEmail = async (
   }
 
   console.log({ data });
+  return true;
 };

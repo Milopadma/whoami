@@ -44,7 +44,11 @@ export function UserForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
 
-    await sendEmail(values.name, values.message, values.contact);
+    const scs = await sendEmail(values.name, values.message, values.contact);
+    if (scs) {
+      alert("Message sent!");
+      form.reset();
+    }
   }
 
   return (
