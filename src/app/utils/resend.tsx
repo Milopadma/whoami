@@ -9,8 +9,8 @@ console.log({ token });
 const resend = new Resend(token);
 
 export const sendEmail = async (
-  content: string,
   name: string,
+  content: string,
   contact: string
 ) => {
   console.log("Sending email...");
