@@ -7,7 +7,7 @@ html {
 }
 
 * {
-  /* @apply outline outline-red-500; */
+  @apply outline outline-red-500;
   @apply scroll-smooth;
   @apply transition-all duration-300 ease-in-out;
 }

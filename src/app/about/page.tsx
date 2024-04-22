@@ -12,11 +12,13 @@ function About() {
   };
 
   return (
-    <div className="mx-auto grid w-full grid-cols-6 bg-white px-4 py-20 text-2xl tracking-tighter text-neutral-800">
-      <div className="col-span-4 col-start-2">
-        <Menu label="about" />
-        <div className="mt-12">
-          <div className="mt-8">
+    <>
+      <Spacing md />
+      <div className="grid w-full grid-cols-6 bg-zinc-50 text-xl tracking-tighter text-neutral-800">
+        <div className="col-span-4 col-start-2">
+          <Menu label="about" />
+          <Spacing xl />
+          <div>
             <p className="max-w-[500px]">21 years old, balinese-indonesian.</p>
             <Spacing sm />
             <p className="max-w-[500px]">
@@ -31,7 +33,7 @@ function About() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

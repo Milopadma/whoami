@@ -57,9 +57,6 @@ const Menu: React.FC<MenuProps> = ({ label }) => {
               <a href="/about" className="underline-animation max-w-max">
                 about
               </a>
-              <a href="/portfolio" className="underline-animation max-w-max">
-                portfolio
-              </a>
             </ul>
           </div>
         </div>

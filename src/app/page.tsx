@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { UserForm } from "./components/form";
 import Spacing from "@/components/spacing";
+import { CardDrawer } from "@/components/carddrawer";
 
 function Home() {
   interface ProjectCardProps {
@@ -55,6 +56,7 @@ function Home() {
         "algoliasearch",
       ],
       description: "the online home for a property agency",
+      url: "https://blirumah-web.vercel.app",
     },
     {
       imageSrc:
@@ -63,14 +65,16 @@ function Home() {
       tags: ["website", "nextjs", "tailwind"],
       description:
         "a place for all information regarding the best wood company in indonesia",
+      url: "https://asa-wood.vercel.app",
     },
     {
       imageSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/a1bb09e59f25737cd80fd177858c64940ac8d6dfeb771c2f8bce905827fdf10d?apiKey=3b2ae921196341e8b90eea3d3fee0292&",
-      title: "asa wood",
+      title: "7seas",
       tags: ["website", "nextjs", "tailwind"],
       description:
         "a place for all information regarding the best wood company in indonesia",
+      url: "https://asa-wood.vercel.app",
     },
   ];
   return (
@@ -108,9 +112,27 @@ function Home() {
           <h2 className="text-3xl font-bold tracking-tighter">recent work</h2>
           <Spacing lg />
           <div className="flex flex-wrap gap-8 w-full">
-            <ProjectCard {...projects[0]} />
-            <ProjectCard {...projects[1]} />
-            <ProjectCard {...projects[2]} />
+            <CardDrawer
+              title={projects[0].title}
+              description={projects[0].description}
+              url={projects[0].url}
+            >
+              <ProjectCard {...projects[0]} />
+            </CardDrawer>
+            <CardDrawer
+              title={projects[1].title}
+              description={projects[1].description}
+              url={projects[1].url}
+            >
+              <ProjectCard {...projects[1]} />
+            </CardDrawer>
+            <CardDrawer
+              title={projects[2].title}
+              description={projects[2].description}
+              url={projects[2].url}
+            >
+              <ProjectCard {...projects[2]} />
+            </CardDrawer>
           </div>
         </div>
       </div>
@@ -132,7 +154,7 @@ function Home() {
         <div className="flex w-full flex-col bg-neutral-800 p-20 max-sm:px-6 col-span-4 col-start-2">
           <div>
             im open to work, shoot a message!
-            <div className="absolute z-10 min-h-[129px] w-full translate-y-[310%] right-0 rounded-full bg-neutral-800 col-span-4 col-start-2" />
+            <div className="absolute z-10 min-h-[129px] w-full translate-y-[305%] right-0 rounded-full bg-neutral-800 col-span-4 col-start-2" />
           </div>
           <UserForm />
         </div>
