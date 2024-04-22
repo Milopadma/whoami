@@ -19,9 +19,16 @@ function Home() {
     description,
   }) => (
     <div className="flex flex-col rounded-2xl bg-zinc-50 pb-12 hover:cursor-pointer hover:scale-[101%] hover:outline hover:outline-neutral-700 hover:outline-offset-8">
-      <Image src={imageSrc} alt={title} width={500} height={835} />
+      <div className="relative h-72 ">
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          className="object-cover object-left"
+        />
+      </div>
       <h3 className="mt-3 text-2xl font-bold tracking-tighter">{title}</h3>
-      <div className="mt-2.5 flex gap-2 whitespace-nowrap text-sm tracking-tighter">
+      <div className="mt-2.5 flex gap-x-2 gap-y-1 flex-wrap text-sm tracking-tighter">
         {tags.map((tag) => (
           <div
             key={tag}
@@ -99,8 +106,8 @@ function Home() {
           <Spacing xl />
           <Spacing xl />
           <h2 className="text-3xl font-bold tracking-tighter">recent work</h2>
-          <Spacing sm />
-          <div className="flex flex-wrap gap-8">
+          <Spacing lg />
+          <div className="flex flex-wrap gap-8 w-full">
             <ProjectCard {...projects[0]} />
             <ProjectCard {...projects[1]} />
             <ProjectCard {...projects[2]} />
@@ -123,10 +130,12 @@ function Home() {
       >
         <div className="absolute z-10 min-h-[129px] w-full -translate-y-[50%] rounded-full bg-neutral-800 col-span-4 col-start-2" />
         <div className="flex w-full flex-col bg-neutral-800 p-20 max-sm:px-6 col-span-4 col-start-2">
-          <p>im open to work, shoot a message!</p>
+          <div>
+            im open to work, shoot a message!
+            <div className="absolute z-10 min-h-[129px] w-full translate-y-[310%] right-0 rounded-full bg-neutral-800 col-span-4 col-start-2" />
+          </div>
           <UserForm />
         </div>
-        <div className="absolute z-10 min-h-[129px] w-full translate-y-[390%] rounded-full bg-neutral-800 col-span-4 col-start-2" />
       </footer>
       <Spacing xl />
     </div>
