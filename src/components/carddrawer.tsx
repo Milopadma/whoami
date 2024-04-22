@@ -36,14 +36,16 @@ export function CardDrawer({
     <Drawer>
       <DrawerTrigger className="text-left">{children}</DrawerTrigger>
       <DrawerContent>
-        <Images />
+        <div className="px-4">
+          <Images />
+        </div>
         <DrawerHeader>
           <DrawerTitle className="text-2xl">{title}</DrawerTitle>
           <DrawerDescription className="text-base">
             {description}
           </DrawerDescription>
         </DrawerHeader>
-        <DrawerFooter className="flex flex-col md:flex-row justify-end w-full">
+        <DrawerFooter className="flex flex-col md:flex-row w-full">
           <Button onClick={() => navigate()}>View Production</Button>
           <DrawerClose>
             <Button variant="outline">Cancel</Button>

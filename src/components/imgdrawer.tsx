@@ -44,13 +44,8 @@ const GridImages = ({ imgurls }: { imgurls: string[] }) => {
   return (
     <>
       {imgurls.map((imgurl, index) => (
-        <div
-          key={index}
-          className={`${
-            index % 3 === 0 ? "col-span-2" : ""
-          } hover:brightness-75 hover:cursor-pointer`}
-        >
-          <div className="relative h-[500px]">
+        <div key={index} className={`${index % 3 === 0 ? "col-span-2" : ""}`}>
+          <div className="relative h-[768px]">
             <Image
               fill
               src={imgurl}

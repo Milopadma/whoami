@@ -28,8 +28,9 @@ function Home() {
           className="object-cover object-left"
         />
       </div>
-      <h3 className="mt-3 text-2xl font-bold tracking-tighter">{title}</h3>
-      <div className="mt-2.5 flex gap-x-2 gap-y-1 flex-wrap text-sm tracking-tighter">
+      <Spacing xs />
+      <h3 className="text-2xl font-bold tracking-tighter">{title}</h3>
+      <div className="flex gap-x-2 gap-y-1 flex-wrap text-sm tracking-tighter">
         {tags.map((tag) => (
           <div
             key={tag}
@@ -39,7 +40,8 @@ function Home() {
           </div>
         ))}
       </div>
-      <p className="mt-3 text-base tracking-tighter">{description}</p>
+      <Spacing xs />
+      <p className="text-base tracking-tighter">{description}</p>
     </div>
   );
 
@@ -55,12 +57,11 @@ function Home() {
         "postgresql",
         "algoliasearch",
       ],
-      description: "the online home for a property agency",
+      description: "the online home for a property and realtor agency",
       url: "https://blirumah-web.vercel.app",
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/a1bb09e59f25737cd80fd177858c64940ac8d6dfeb771c2f8bce905827fdf10d?apiKey=3b2ae921196341e8b90eea3d3fee0292&",
+      imageSrc: "/asawoodfigma.png",
       title: "asa wood",
       tags: ["website", "nextjs", "tailwind"],
       description:
@@ -68,12 +69,11 @@ function Home() {
       url: "https://asa-wood.vercel.app",
     },
     {
-      imageSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/a1bb09e59f25737cd80fd177858c64940ac8d6dfeb771c2f8bce905827fdf10d?apiKey=3b2ae921196341e8b90eea3d3fee0292&",
+      imageSrc: "/7seasfigma.png",
       title: "7seas",
       tags: ["website", "nextjs", "tailwind"],
       description:
-        "a place for all information regarding the best wood company in indonesia",
+        "a quick hotel booking/info website for the best experience in gili air",
       url: "https://asa-wood.vercel.app",
     },
   ];
