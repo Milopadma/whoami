@@ -28,7 +28,7 @@ function About() {
             </p>
             <Spacing sm />
             <p className="max-w-[500px]">
-              now studying for an information systems degree in bali.
+              now studying for an information systems degree.
             </p>
           </div>
         </div>

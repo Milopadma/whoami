@@ -36,9 +36,7 @@ export function CardDrawer({
     <Drawer>
       <DrawerTrigger className="text-left">{children}</DrawerTrigger>
       <DrawerContent>
-        <div className="px-4">
-          <Images />
-        </div>
+        <Images />
         <DrawerHeader>
           <DrawerTitle className="text-2xl">{title}</DrawerTitle>
           <DrawerDescription className="text-base">

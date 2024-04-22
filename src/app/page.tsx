@@ -25,7 +25,7 @@ function Home() {
           src={imageSrc}
           alt={title}
           fill
-          className="object-cover object-left"
+          className="object-cover object-left rounded-2xl"
         />
       </div>
       <Spacing xs />
