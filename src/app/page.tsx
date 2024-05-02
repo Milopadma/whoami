@@ -112,28 +112,53 @@ function Home() {
               <span className="text-neutral-900 text-7xl opacity-70">💻</span>
             </div>
             <div>
-              <div className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.4em)] flex flex-row gap-1 items-center">
-                blirumah property listing
+              <a
+                href="https://www.figma.com/proto/bVhSIL3CZhpvYehvn0ToE9/blirumah?page-id=1203%3A966&type=design&node-id=3252-3253&viewport=-5332%2C68%2C0.25&t=ffF4KPSWm295ZyY8-1&scaling=scale-down&starting-point-node-id=3252%3A3253&show-proto-sidebar=1&mode=design"
+                target="_"
+                className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.4em)] flex flex-row gap-1 items-center"
+              >
+                property listing website prototype
                 <Icon linkout />
-              </div>
+              </a>
               <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">
-                nextjs, tailwindcss
+                figma, tailwindcss
               </div>
             </div>
             <div>
-              <div className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.4em)] flex flex-row gap-1 items-center">
-                nbc app
+              <a
+                href="https://www.figma.com/proto/sIfJzI06pIo7OToAmRTiiZ/nbc-app?page-id=1203%3A966&type=design&node-id=1203-989&viewport=555%2C442%2C0.54&t=RTVGhNW7HA0OXwHu-1&scaling=scale-down&starting-point-node-id=1203%3A989&show-proto-sidebar=1&mode=design"
+                target="_"
+                className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.4em)] flex flex-row gap-1 items-center"
+              >
+                beauty salon app prototype
                 <Icon linkout />
-              </div>
+              </a>
               <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">
-                expo, react native
+                figma, tailwindcss
               </div>
             </div>
             <div>
-              <div className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.4em)] flex flex-row gap-1 items-center">
+              <a
+                href="https://www.7seascottages.com/"
+                target="_"
+                className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.4em)] flex flex-row gap-1 items-center"
+              >
+                7seas
+                <Icon linkout />
+              </a>
+              <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">
+                vite, react
+              </div>
+            </div>
+            <div>
+              <a
+                href="https://asa-wood-web.vercel.app/"
+                target="_"
+                className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.4em)] flex flex-row gap-1 items-center"
+              >
                 asawood website
                 <Icon linkout />
-              </div>
+              </a>
               <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">
                 react, vite, tailwindcss
               </div>
