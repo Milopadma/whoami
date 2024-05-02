@@ -1,3 +1,5 @@
+"use client"
+import Feed from "@/components/feed";
 import Spacing from "@/components/spacing";
 
 function Home() {
@@ -92,22 +94,40 @@ function Home() {
             <span className="text-neutral-900 text-7xl opacity-70">💻</span>
           </div>
           <div>
-            <div className="text-neutral-800 whitespace-pre-line leading-[calc(1.4em)]">blirumah property listing</div>
-            <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">nextjs, tailwindcss</div>
+            <div className="text-neutral-800 whitespace-pre-line leading-[calc(1.4em)]">
+              blirumah property listing
+            </div>
+            <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">
+              nextjs, tailwindcss
+            </div>
           </div>
           <div>
-            <div className="text-neutral-800 whitespace-pre-line leading-[calc(1.4em)]">nbc app</div>
-            <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">expo, react native</div>
+            <div className="text-neutral-800 whitespace-pre-line leading-[calc(1.4em)]">
+              nbc app
+            </div>
+            <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">
+              expo, react native
+            </div>
           </div>
           <div>
-            <div className="text-neutral-800 whitespace-pre-line leading-[calc(1.4em)]">asawood website</div>
-            <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">react, vite, tailwindcss</div>
+            <div className="text-neutral-800 whitespace-pre-line leading-[calc(1.4em)]">
+              asawood website
+            </div>
+            <div className="text-neutral-400 whitespace-pre-line leading-[calc(1.4em)]">
+              react, vite, tailwindcss
+            </div>
           </div>
         </div>
       </div>
       <Spacing size80 />
       <div className="col-start-1 col-span-6">
-        <p className="text-neutral-400 helvetica text-sm">catch me on <a className="underline" href="https://www.twitter.com/mylodev">twitter!</a></p>
+        <p className="text-neutral-400 helvetica text-sm">
+          catch me on{" "}
+          <a className="underline" href="https://www.twitter.com/mylodev">
+            twitter!
+          </a>
+        </p>
+        <Feed />
       </div>
     </div>
   );
