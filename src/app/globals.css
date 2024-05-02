@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica&display=swap');
+
 html {
   @apply bg-zinc-50;
+  font-family: 'Alatsi', 'Helvetica', sans-serif;
+}
+
+.alatsi {
+  font-family: 'Alatsi', sans-serif;
+}
+
+.helvetica {
+  font-family: 'Helvetica', sans-serif;
+  @apply tracking-tighter;
 }
 
 * {
-  /* @apply outline outline-red-500; */
   @apply scroll-smooth;
   @apply transition-all duration-300 ease-in-out;
 }
