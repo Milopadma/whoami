@@ -229,6 +229,16 @@ function Home() {
                 <Icon linkout />
               </div>
             </a>
+            <a
+              href="https://github.com/milopadma"
+              className="block"
+              target="_"
+            >
+              <div className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.1em)] flex flex-row gap-1">
+                github
+                <Icon linkout />
+              </div>
+            </a>
           </div>
           <div
             id="card"
