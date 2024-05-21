@@ -23,7 +23,7 @@ function Home() {
           <div className="grid grid-cols-5 gap-2">
             <div
               id="card"
-              className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg h-[292px] w-full rounded-lg col-start-1 col-span-2"
+              className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg h-[292px] w-full rounded-lg col-start-1 col-span-2 border-neutral-100 border-2"
             >
               <h1 className="text-neutral-400 text-sm">tools & tech stack</h1>
               <div className="absolute translate-y-[290%] rotate-[-25deg]">
@@ -43,7 +43,7 @@ function Home() {
             <div className="flex flex-col w-full col-start-3 col-span-3 gap-2">
               <div
                 id="card"
-                className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg h-[186px] w-full rounded-lg"
+                className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg h-[186px] w-full rounded-lg border-neutral-100 border-2"
               >
                 <h1 className="text-neutral-400 text-sm">education</h1>
                 <div className="absolute translate-y-[-75%] translate-x-[200%] rotate-[15deg]">
@@ -80,7 +80,7 @@ function Home() {
               </div>
               <div
                 id="card"
-                className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg h-[98px] rounded-lg"
+                className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg h-[98px] rounded-lg border-neutral-100 border-2"
               >
                 <h1 className="text-neutral-400 text-sm">currently reading</h1>
                 <div className="absolute translate-y-[-20%] translate-x-[200%] rotate-[5deg]">
@@ -105,7 +105,7 @@ function Home() {
         <div className="col-start-1 col-span-6">
           <div
             id="card"
-            className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg w-full rounded-lg col-start-1 col-span-2"
+            className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg w-full rounded-lg col-start-1 col-span-2 border-neutral-100 border-2"
           >
             <h1 className="text-neutral-400 text-sm">recent projects</h1>
             <div className="absolute translate-y-[230%] translate-x-[300%] rotate-[12deg]">
@@ -185,16 +185,16 @@ function Home() {
             style={{ height: "800px" }}
           ></iframe>
         </div>
-        <div className="col-start-2 col-span-4 gap-2 w-full">
+        <div className="col-start-3 col-span-3 gap-2 w-full">
           <Spacing size112 />
           <a
             href="https://twitter.com/messages/2549656566-2549656566?text=hello!"
             target="_"
             id="card"
-            className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg h-[98px] rounded-lg justify-center items-center max-w-[500px] hover:bg-neutral-200 text-neutral-800 hover:text-neutral-400 transition-all ease-linear duration-200"
+            className="flex flex-col relative helvetica bg-blue-200 p-6 gap-4 shadow-lg rounded-lg justify-center items-center max-w-[250px] hover:bg-neutral-200 text-blue-500 hover:text-neutral-400 transition-all ease-linear duration-200"
           >
             <h1>lets connect</h1>
-            <div className="absolute translate-y-[-20%] translate-x-[calc(20vw)] rotate-[15deg]">
+            <div className="absolute translate-y-[-20%] translate-x-[calc(10vw)] rotate-[15deg]">
               <span className="text-neutral-900 text-9xl opacity-90">❗</span>
             </div>
           </a>
@@ -203,7 +203,7 @@ function Home() {
         <div className="col-start-1 col-span-6 flex flex-row gap-2">
           <div
             id="card"
-            className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg w-full rounded-lg"
+            className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg w-full rounded-lg border-neutral-100 border-2"
           >
             <h1 className="text-neutral-400 text-sm">other contacts</h1>
             <div className="absolute translate-y-[-75%] translate-x-[-65%] rotate-[90deg]">
@@ -229,11 +229,7 @@ function Home() {
                 <Icon linkout />
               </div>
             </a>
-            <a
-              href="https://github.com/milopadma"
-              className="block"
-              target="_"
-            >
+            <a href="https://github.com/milopadma" className="block" target="_">
               <div className="text-neutral-800 hover:text-neutral-400 whitespace-pre-line leading-[calc(1.1em)] flex flex-row gap-1">
                 github
                 <Icon linkout />
@@ -242,7 +238,7 @@ function Home() {
           </div>
           <div
             id="card"
-            className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg w-full rounded-lg"
+            className="flex flex-col relative helvetica bg-neutral-50 p-6 gap-4 shadow-lg w-full rounded-lg border-neutral-100 border-2"
           >
             <h1 className="text-neutral-400 text-sm">work with me?</h1>
             <div className="absolute translate-y-[75%] translate-x-[135%] rotate-[0deg]">
